@@ -10,6 +10,9 @@
 #include<iostream>
 #include<vector>
 void assign();
+void vector_display_1();
+void vector_display_2();
+void vector_display_3();
 
 
 using namespace std;
@@ -73,6 +76,33 @@ void assign() {
 
 }
 
+void vector_display_1() {								// push_back
+
+	vector<int> v4;
+	v4.push_back(100);
+	v4.push_back(101);
+	const int &i = v4.at(0);
+	const int &j = v4.at(1);
+	cout << "first element is " << i << endl;
+	cout << "second element is " << j << endl;
+}
+
+
+void vector_display_2() {
+
+	vector<int> v5;
+	v5.push_back(10);
+	v5.push_back(11);
+	int &i = v5.back();
+	int &ii = v5.front();
+	cout << "The last integer of v5 is " << i << endl;
+	cout << "The last integer of v5 is " << ii << endl;
+}
+
+void vector_display_3() {
+
+
+}
 
 int main() {
 	std::vector<int> a = { 2,4,3,5,6 };
@@ -82,7 +112,8 @@ int main() {
     int acm = 0;
 	accumulator_function2(v,acm,0,3);
 
-	assign();
-	
-	return 0;
+	assign();					// Details on how vector v1,v2 and v3 is handeled
+	vector_display_1();			// Displays 1st and 2nd position and element in vectr 4
+	vector_display_2();	        // Displays vector::back and first and last element of the vector
+	vector_display_3();		    // Display vector::begin
 }
